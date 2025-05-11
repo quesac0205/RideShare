@@ -1,73 +1,69 @@
-Designer: Sachin Bansal
+# 🚗 RideShare – A C++ Ride Matching Simulation
+**Designer:** Sachin Bansal  
+A C++ object-oriented simulation of an Uber-like ride-sharing system, complete with driver-customer matching, map visualization, and location-based logic.
 
-Important points to remember:
-=> Make sure to use the course VM running g++ compiler to form the executable 
+## 📘 Overview
+RideShare is a city-based simulation that maintains two separate lists: **Drivers** and **Customers**, each having their own location. Customers can request rides, and the system automatically matches them to the nearest eligible driver based on vehicle capacity and driver rating.
 
-
-Directory Structure:
- # ls -l
-- a4
-- Controller.cc
-- Controller.h
-
-- Customer.cc
-- Customer.h
-
-- defs.h
-- Drawable.cc
-- Drawable.h
-
-- Driver.cc
-- Driver.h
-
-- List.h
-- Location.cc
-- Location.h
-
-- main.cc
-- Makefile
-- README
-
-- RideShare.cc
-- RideShare.h
-
-- User.cc
-- User.h
-
-- View.cc
-- View.h
+The simulation also includes a visual map view where:
+- Customers appear inside buildings  
+- Drivers appear on roads  
 
 
-How to form a executable using Makefile:
-=> using the following command will make an executable file by named of a4 in assignment4 directory 
-$ make
-$ ./a4 (to run the executable)
+## 🗂️ Directory Structure
+├── a4/ # Compiled output
+├── Controller.{cc,h}
+├── Customer.{cc,h}
+├── Driver.{cc,h}
+├── Drawable.{cc,h}
+├── Location.{cc,h}
+├── RideShare.{cc,h}
+├── User.{cc,h}
+├── View.{cc,h}
+├── List.h # Custom linked list class
+├── defs.h # Definitions and constants
+├── main.cc
+├── Makefile
+└── README
 
 
-How to clean the object files:
-=> using the following command will clean all the executables and object files
-$ make clean
+## ⚙️ How to Build and Run
+Make sure you're using the **linux based provided VM** with the correct `g++` compiler.
+
+### ▶️ Build the Executable
+```bash make
+
+### ▶️ Run the Program
+bash ./a4
+
+##🧹 Clean Build Files
+To remove all compiled object files and the executable:
+bash make clean
+
+🧠 Key Features
+🚕 Dynamic ride-matching based on location, vehicle size, and rating
+🏙️ Map visualization with separate drawing logic for drivers and customers
+👥 Multiple dispatch using Visitor pattern for flexible draw operations
+✅ Full memory safety with clean heap usage and proper deallocation
+
+
+##✅ Memory Leak Check (Valgrind Output)
+
+== HEAP SUMMARY ==
+In use at exit: 0 bytes in 0 blocks  
+Total heap usage: 66 allocs, 66 frees, 97,242 bytes allocated  
+All heap blocks were freed – no memory leaks possible ✔
 
 
 
-Memory Leak Check 
-                                    
-Driver location tests complete, score 2/2
-Customer location tests complete, score 2/2
-Total score: 4/4
+##💡 Concepts Demonstrated
+Object-Oriented Programming in C++
+Visitor Pattern & Multiple Dispatch
+Dynamic memory management with custom lists
+Command-line simulation & interactive logic
+Unit testing with Valgrind validation
 
-Correct driver found
-Score: 4/4
 
-Bye!
-==67969== 
-==67969== HEAP SUMMARY:
-==67969==     in use at exit: 0 bytes in 0 blocks
-==67969==   total heap usage: 66 allocs, 66 frees, 97,242 bytes allocated
-==67969== 
-==67969== All heap blocks were freed -- no leaks are possible
-==67969== 
-==67969== For lists of detected and suppressed errors, rerun with: -s
-==67969== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
+📬 Contact
+Feel free to reach out at SachinBansal@cmail.carleton.ca
 
