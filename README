@@ -11,7 +11,7 @@ The simulation also includes a visual map view where:
 
 
 ## 🗂️ Directory Structure
-├── a4/ # Compiled output
+├── a/ # Compiled output
 ├── Controller.{cc,h}
 ├── Customer.{cc,h}
 ├── Driver.{cc,h}
@@ -34,21 +34,20 @@ Make sure you're using the **linux based provided VM** with the correct `g++` co
 ```bash make
 
 ### ▶️ Run the Program
-bash ./a4
+bash ./a
 
 ##🧹 Clean Build Files
 To remove all compiled object files and the executable:
 bash make clean
 
-🧠 Key Features
+##🧠 Key Features
 🚕 Dynamic ride-matching based on location, vehicle size, and rating
 🏙️ Map visualization with separate drawing logic for drivers and customers
-👥 Multiple dispatch using Visitor pattern for flexible draw operations
-✅ Full memory safety with clean heap usage and proper deallocation
+👥 Multiple dispatch for flexible draw operations
+✅ Full memory mgmt with clean heap usage and proper deallocation
 
 
 ##✅ Memory Leak Check (Valgrind Output)
-
 == HEAP SUMMARY ==
 In use at exit: 0 bytes in 0 blocks  
 Total heap usage: 66 allocs, 66 frees, 97,242 bytes allocated  
@@ -64,6 +63,6 @@ Command-line simulation & interactive logic
 Unit testing with Valgrind validation
 
 
-📬 Contact
+##📬 Contact
 Feel free to reach out at SachinBansal@cmail.carleton.ca
 
