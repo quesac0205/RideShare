@@ -1,9 +1,9 @@
 objects = main.o Controller.o View.o RideShare.o User.o Drawable.o Driver.o Customer.o Location.o
 
-all: a4
+all: a
 
 a4: $(objects)
-	g++ -o a4 $(objects) 
+	g++ -o a $(objects) 
 
 main.o: main.cc Controller.h 
 	g++ -c main.cc 
@@ -35,4 +35,4 @@ Location.o: Location.cc Location.h
 	
 
 clean:
-	rm -f a4 a4test *.o
+	rm -f a atest *.o
